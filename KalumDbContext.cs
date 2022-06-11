@@ -60,7 +60,7 @@ namespace WebApiKalum
                 .HasForeignKey<Inscripcion>(inscripcion => inscripcion.Carne);
             modelBuilder.Entity<CuentaPorCobrar>()
                 .HasOne<Cargo>(cxc => cxc.Cargo)
-                .WithMany(c => c.CuentasXCobrar)
+                .WithMany(c => c.CuentasPorCobrar)
                 .HasForeignKey(cxc => cxc.CargoId);
             modelBuilder.Entity<InversionCarreraTecnica>()
                 .HasOne<CarreraTecnica>(ict => ict.CarreraTecnica)
